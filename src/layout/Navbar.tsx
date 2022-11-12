@@ -14,7 +14,7 @@ const inActiveStyle: React.CSSProperties = {
 
 export function Navbar(): JSX.Element {
   return (
-    <nav className="bg-blue-600">
+    <nav className="bg-[#012048]">
       <ul className="container mx-auto p-4 flex justify-start items-center space-x-6">
         <li>
           <NavLink
