@@ -19,7 +19,7 @@ export function Products() {
               width={250}
               height={350}
               onClick={() =>
-                navigate(`/product/${id}`, { state: { imgUrl, ...rest } })
+                navigate(`/product/${id}`, { state: { id, imgUrl, ...rest } })
               }
             />
           );

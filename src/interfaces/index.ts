@@ -25,3 +25,25 @@ export interface BookCardProps {
   author: string;
   description: string;
 }
+
+export interface QuantityButtonProps {
+  value: number;
+  onChange: (val: number) => void;
+}
+
+export type CartItem = Book & { quantity: number };
+
+export interface CartState {
+  total: number;
+  items: CartItem[];
+}
+
+export interface CartItemProps {
+  imgUrl: string;
+  title: string;
+  author: string;
+  price: string;
+  quantity: number;
+  onChangeQuantity: (val: number) => void;
+  onRemoveItem: () => void;
+}
