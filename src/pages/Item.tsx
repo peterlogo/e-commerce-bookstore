@@ -7,7 +7,7 @@ export function Item(): JSX.Element {
   const book = location.state;
 
   return (
-    <div className="grid grid-cols-4 gap-4">
+    <div className="grid grid-cols-4 gap-6">
       <div className="col-span-3 bg-white p-8 border rounded-md shadow-md">
         <BookCard
           title={book.title}
@@ -16,18 +16,22 @@ export function Item(): JSX.Element {
         />
       </div>
       <div className="space-y-4">
-        <div>
-          <Image src={book.imgUrl} width={250} height={300} fit="contain" />
-        </div>
+        <Image
+          src={book.imgUrl}
+          width={250}
+          height={380}
+          fit="cover"
+          radius="md"
+        />
         <div className="flex justify-start items-center space-x-2">
-          <Text className="font-medium text-lg">Price:</Text>
-          <Text className="font-medium text-lg">
+          <Text className="font-medium text-xl">Price:</Text>
+          <Text className="font-medium text-xl">
             ${book.price.substring(1)}
           </Text>
         </div>
         <div className="flex justify-start items-center space-x-2">
-          <Text className="font-medium text-lg">Quantity:</Text>
-          <Text className="font-medium text-lg">1</Text>
+          <Text className="font-medium text-xl">Quantity:</Text>
+          <Text className="font-medium text-xl">1</Text>
         </div>
         <div>
           <Button size="md" variant="filled" className="bg-blue-600">
