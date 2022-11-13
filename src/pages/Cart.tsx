@@ -3,7 +3,7 @@ import { CartItem } from "../components";
 import { increaseQuantity, removeFromCart } from "../features";
 import { useAppDispatch, useAppSelector } from "../hooks";
 
-export function Cart() {
+export function Cart(): JSX.Element {
   const cartItems = useAppSelector((state) => state.cart.items);
   const totalBalance = useAppSelector((state) => state.cart.total);
 

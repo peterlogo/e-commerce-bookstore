@@ -7,7 +7,10 @@ import {
 import { useRef } from "react";
 import { QuantityButtonProps } from "../interfaces";
 
-export function QuantityButton({ value, onChange }: QuantityButtonProps) {
+export function QuantityButton({
+  value,
+  onChange,
+}: QuantityButtonProps): JSX.Element {
   const handlers = useRef<NumberInputHandlers>();
 
   return (

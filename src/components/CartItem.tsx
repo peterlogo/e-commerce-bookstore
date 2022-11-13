@@ -11,7 +11,7 @@ export function CartItem({
   quantity,
   onChangeQuantity,
   onRemoveItem,
-}: CartItemProps) {
+}: CartItemProps): JSX.Element {
   return (
     <div className="bg-white flex justify-between items-start border rounded-md shadow-md  w-full mb-4 p-4">
       <div className="flex justify-start items-center space-x-4">

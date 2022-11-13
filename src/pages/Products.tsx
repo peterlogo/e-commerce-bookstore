@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Thumbnail } from "../components";
 import { useGetBooksQuery } from "../features";
 
-export function Products() {
+export function Products(): JSX.Element {
   const { data, isLoading } = useGetBooksQuery(null);
 
   const navigate = useNavigate();
@@ -11,7 +11,7 @@ export function Products() {
     <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
       {isLoading ? <Loader /> : null}
       {data &&
-        data.map(({ id, imgUrl, ...rest }) => {
+        data.slice(0, 8).map(({ id, imgUrl, ...rest }) => {
           return (
             <Thumbnail
               key={id}
